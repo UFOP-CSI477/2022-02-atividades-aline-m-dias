@@ -1,6 +1,6 @@
-# **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
+# **CSI606-2022-02 - Presencial - Proposta de Trabalho Final**
 
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Aline Martins Dias*
 
 --------------
 
@@ -13,22 +13,32 @@
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
-  O trabalho final tem como tema o desenvolvimento de ...
-
+  Durante um curso de graduação, o período acadêmico pode ser estressante para muitos alunos pois são sugeridas várias atividades escolares pelos professores, podendo citar como exemplo, estudar para provas, fazer trabalhos, listas de exercícios, seminários, escrever artigos, resenhas e relatórios, entre outros. Diante disso, muitos alunos acabam deixando para a última hora essas demandas, não por  desinteresse ou desatenção, mas pela dificuldade em acompanhar os prazos propostos no plano de ensino dos professores, tendo em vista em que o mesmo deve conciliar os afazeres da vida pessoal como: trabalho,
+  família e outros fatores externos que afetam diretamente o desempenho escolar.
 <!-- Descrever e limitar o escopo da aplicação. -->
 ### 2. Escopo
 
-  Este projeto terá as seguintes funcionalidades...
+  O sistema desenvolvido será um produto mínimo viável que permitirá ao usuário a inserção de informações, alterações,  pesquisa e exclusão de dados. Sendo as principais funcionalidades: 
+- Login
+-  Cadastro de  Usuário 
+- Cadastro das disciplinas 
+- Cadastro das atividades escolares, bem como data da realização/entrega
+- Consulta das tarefas finalizadas
+- Consulta das tarefas pendentes
+- Alteração dos dados 
+- Exclusão de dados 
 
 <!-- Apresentar restrições de funcionalidades e de escopo. -->
 ### 3. Restrições
 
-  Neste trabalho não serão considerados ...
+ O sistema desenvolvido será um produto viável mínimo (MVP) dessa forma não será considerado a possibilidade de adicionar as funcionalidade abaixo no escopo do projeto:
+
+ - Login com a conta do google;
 
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos para as páginas (descrever quais páginas) foram elaborados, e podem ser encontrados em...
+  Protótipos será apresentado em breve.
 
 ### 5. Referências
 

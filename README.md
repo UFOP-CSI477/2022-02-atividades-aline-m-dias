@@ -2,12 +2,12 @@
 
 ## Atualize os seus dados
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Aline Martins Dias
+- Matrícula: 19.1.8183
+- Curso: Sistemas de informação
+- Semestre/Ano correntes: 2022/2
+- Link para o seu GitHub: https://github.com/aline-m-dias
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+
