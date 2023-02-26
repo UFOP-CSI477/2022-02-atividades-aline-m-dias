@@ -1,6 +1,10 @@
 import {Router} from 'express'; 
+import { GetAllEstadosController } from '../controller/estados/GetAllEstadosController.js';
+
 
 const mainRouter= Router();
+const getAllEstadosController =   new GetAllEstadosController();
+
 
 mainRouter.get('/', (request ,response)=>{
 
@@ -14,5 +18,7 @@ mainRouter.get('/admin', (request, response) => {
     });
 
 });
+
+mainRouter.get('/estados', getAllEstadosController.handle);
 
 export { mainRouter };
