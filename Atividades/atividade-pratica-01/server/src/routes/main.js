@@ -8,7 +8,7 @@ mainRouter.get('/', (request ,response)=>{
 });
 
 mainRouter.get('/admin', (request, response) => {
-    
+
     response.json({
         mensage: "API Server is running"
     });

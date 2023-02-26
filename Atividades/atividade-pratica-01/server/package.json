@@ -1,20 +1,22 @@
 {
-  "name": "server",
+  "name": "server-api-doacao-sangue",
   "version": "1.0.0",
-  "description": "",
+  "description": "servidor da aplicação doação de sangue",
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Aline Dias",
+  "author": "Aline M Dias",
   "license": "MIT",
   "type": "module",
   "dependencies": {
+    "@prisma/client": "^4.10.1",
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prisma": "^4.10.1"
   }
 }

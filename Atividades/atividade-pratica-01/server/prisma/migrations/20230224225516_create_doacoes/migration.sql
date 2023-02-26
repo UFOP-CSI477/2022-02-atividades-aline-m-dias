@@ -1,0 +1,11 @@
+-- CreateTable
+CREATE TABLE "Doacoes" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "pessoa_id" INTEGER NOT NULL,
+    "local_id" INTEGER NOT NULL,
+    "data" DATETIME NOT NULL,
+    "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Doacoes_pessoa_id_fkey" FOREIGN KEY ("pessoa_id") REFERENCES "Pessoas" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Doacoes_local_id_fkey" FOREIGN KEY ("local_id") REFERENCES "LocaisColeta" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+);
