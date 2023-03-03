@@ -3,9 +3,22 @@ import { prisma } from '../../database/client.js';
 export class UpdateEstadoController{
     
     async handle(request, response) {
-        const updateUser = await prisma.user.update({
+
+        const {id, nome, sigla} = request.body;
+
+        const estado = await prisma.estado.update({
+            where:{
+                id: parseInt (id)
+            }, 
+
+            data: {
+                nome,
+                sigla,
+                updated_at: new Date()
+            }
           
-          });
+        });
+        response.json(estado);
     }
  
 }
