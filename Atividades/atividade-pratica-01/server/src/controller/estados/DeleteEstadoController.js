@@ -18,15 +18,18 @@ export class DeleteEstadoController{
             where: {
                 id: parseInt(id)
             },
+            })
 
-         }catch (error) {
+        }catch (error) {
             if (error.code === "P2025" && error instanceof  PrismaClientKnownRequestError){
-                return response.status(400).json({ message: `[DeleteEstadoController] Estado id: id não existe`});
+                return response.status(400).json({ 
+                    message: `[DeleteEstadoController] Estado id: id não existe`
+                });
+            } else{
+                return response.status(500).json({ message: "error"});
             }
-         } else{
-            return response.status(500).json({ message: "error"});
-         }
-        
+            
+        }
         
           response.json(estado);
     }

@@ -6,6 +6,7 @@ export class CreateCidadeController {
 
         const { nome, estado_id } = request.body;
 
+        
         // validacoes
         if ( nome === "" ) {
             return response.status(400).json({
@@ -18,11 +19,11 @@ export class CreateCidadeController {
 
             data: {
                 nome,
-                sigla
-            }
+                estado_id, 
+            }, 
+
 
         });
-
         console.log(cidade);
         return response.json(cidade);
 
