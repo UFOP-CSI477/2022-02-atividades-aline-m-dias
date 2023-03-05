@@ -1,6 +1,7 @@
 import express from 'express';
 import { mainRouter } from './routes/main.js';
 import { estadoRouter } from './routes/estado.js';
+import { cidadeRouter } from './routes/cidade.js';
 
 const PORT = 3333;
 
@@ -10,7 +11,7 @@ app.use(express.json());
 // Routes:
 app.use(mainRouter);
 app.use(estadoRouter);
-
+app.use(cidadeRouter);
 // Server - start/listen
 app.listen(PORT, () => {
 
