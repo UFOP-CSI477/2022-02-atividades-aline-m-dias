@@ -14,6 +14,7 @@ app.use(mainRouter);
 app.use(estadoRouter);
 app.use(cidadeRouter);
 app.use(locaisColetaRouter);
+
 // Server - start/listen
 app.listen(PORT, () => {
 
