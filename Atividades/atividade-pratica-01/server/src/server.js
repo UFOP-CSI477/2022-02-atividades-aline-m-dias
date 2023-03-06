@@ -4,6 +4,7 @@ import { estadoRouter } from './routes/estado.js';
 import { cidadeRouter } from './routes/cidade.js';
 import { locaisColetaRouter } from './routes/locaisColeta.js';
 import { tipoSanguineoRouter } from './routes/tipoSanguineo.js';
+import { pessoasRouter } from './routes/pessoas.js';
 
 const PORT = 3333;
 
@@ -16,6 +17,7 @@ app.use(estadoRouter);
 app.use(cidadeRouter);
 app.use(locaisColetaRouter);
 app.use (tipoSanguineoRouter);
+app.use (pessoasRouter);
 
 // Server - start/listen
 app.listen(PORT, () => {
