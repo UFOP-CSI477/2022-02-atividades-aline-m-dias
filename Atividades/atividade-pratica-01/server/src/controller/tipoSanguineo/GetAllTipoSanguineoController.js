@@ -6,6 +6,7 @@ export class GetAllTipoSanguineoController {
 
         const tipo = await prisma.tipoSanguineo.findMany({
             select: {
+                id: true,
                 tipo: true,
                 fator: true
             }
