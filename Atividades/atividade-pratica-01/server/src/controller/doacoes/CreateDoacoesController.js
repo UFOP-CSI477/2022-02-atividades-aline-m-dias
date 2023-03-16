@@ -4,7 +4,7 @@ export class CreateDoacoesController {
 
     async handle(request, response) {
 
-        const {pessoa_id, local_id } = request.body;
+        const {pessoa_id, local_id} = request.body;
 
         const doacoes = await prisma.doacoes.create({
 
@@ -24,6 +24,7 @@ export class CreateDoacoesController {
 
         });
 
+        console.log(doacoes);
         return response.json(doacoes);
 
     }
