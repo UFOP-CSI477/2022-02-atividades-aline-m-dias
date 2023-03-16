@@ -7,8 +7,8 @@ import { UpdateDoacoesController } from "../controller/doacoes/UpdateDoacoesCont
 
 const doacoesRouter = Router();
 
-const  createDoacoesController = new CreateDoacoesController();
-const  getAllDoacoesController = new GetAllDoacoesController();
+const createDoacoesController = new CreateDoacoesController();
+const getAllDoacoesController = new GetAllDoacoesController();
 const deleteDoacoesController = new DeleteDoacoesController();
 const updateDoacoesController = new UpdateDoacoesController();
 
