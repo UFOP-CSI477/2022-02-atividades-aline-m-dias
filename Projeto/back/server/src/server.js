@@ -1,6 +1,7 @@
 import express from 'express';
 import { mainRouter } from './routes/main.js';
 import { alunoRouter } from './routes/alunos.js';
+import {professorRouter} from './routes/professores.js'
 
 const PORT = 4444;
 
@@ -10,6 +11,7 @@ app.use(express.json());
 // Routes:
 app.use(mainRouter);
 app.use(alunoRouter);
+app.use(professorRouter);
 
 // Server - start/listen
 app.listen(PORT, () => {
