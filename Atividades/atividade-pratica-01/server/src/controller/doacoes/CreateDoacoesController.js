@@ -11,16 +11,28 @@ export class CreateDoacoesController {
             data: {
                 pessoas: {
                     connect: {
-                        id: pessoa_id
+                        id: {
+                                select: {
+                                id: pessoa_id
+                            }
+
+                        }
                     }
                 },
                 locaiscoleta: {
                     connect: {
-                        id: local_id
+                        id: {
+                            select: {
+                            id: local_id
+                        }
+
+                    }
                     }
                 }
-                
             }
+            
+                
+            
 
         });
 
