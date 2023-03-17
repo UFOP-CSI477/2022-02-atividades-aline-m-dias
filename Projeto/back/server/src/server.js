@@ -3,6 +3,7 @@ import { mainRouter } from './routes/main.js';
 import { alunoRouter } from './routes/alunos.js';
 import {professorRouter} from './routes/professores.js'
 import { disciplinasRouter } from './routes/diciplinas.js';
+import { entregasRouter } from './routes/entregas.js';
 
 const PORT = 4444;
 
@@ -14,7 +15,7 @@ app.use(mainRouter);
 app.use(alunoRouter);
 app.use(professorRouter);
 app.use(disciplinasRouter);
-
+app.use (entregasRouter);
 // Server - start/listen
 app.listen(PORT, () => {
 
