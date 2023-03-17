@@ -61,6 +61,7 @@ model Diciplina {
   tarefa_id    Int
 
   professor Professor @relation(fields: [professor_id], references: [id])
+ 
 }
 
 model Entregas {

@@ -4,32 +4,29 @@ export class CreateDisciplinasController {
 
     async handle(request, response) {
 
-        const { nome, matricula, dataNascimento, email, endereco, turma_id } = request.body;
+        const { nome, cargaHoraria, Universidade, professor_id, tarefa_id }= request.body;
 
-        // validacoes
-        if ( nome === "" ) {
-            return response.status(400).json({
-                message: "Dados incompletos. Informe o  seu nome"
-            });
-        }
-        // sanitizacao
-
-        const aluno = await prisma.aluno.create({
+        const disciplina = await prisma.diciplina.create({
 
             data: {
                 nome, 
-                matricula, 
-                dataNascimento, 
-                email, 
-                endereco, 
-                turma_id
+                cargaHoraria, 
+                Universidade,
+                professor: {
+                        connect: {
+                            id: professor_id
+                        }
+                    },
+                
+                tarefa_id
             }
 
         });
 
-        console.log(aluno);
-        return response.json(aluno);
+   
+        return response.json(disciplina);
+
+    
 
     }
-
 }
