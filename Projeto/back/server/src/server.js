@@ -4,7 +4,7 @@ import { alunoRouter } from './routes/alunos.js';
 import {professorRouter} from './routes/professores.js'
 import { disciplinasRouter } from './routes/diciplinas.js';
 import { entregasRouter } from './routes/entregas.js';
-
+import { turmaRouter } from './routes/turmas.js';
 const PORT = 4444;
 
 const app = express();
@@ -16,6 +16,7 @@ app.use(alunoRouter);
 app.use(professorRouter);
 app.use(disciplinasRouter);
 app.use (entregasRouter);
+app.use (turmaRouter);
 // Server - start/listen
 app.listen(PORT, () => {
 
