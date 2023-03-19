@@ -6,10 +6,13 @@ import { disciplinasRouter } from './routes/diciplinas.js';
 import { entregasRouter } from './routes/entregas.js';
 import { turmaRouter } from './routes/turmas.js';
 import { tarefaRouter } from './routes/tarefas.js';
+import cors from "cors";
+
 const PORT = 4444;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Routes:
 app.use(mainRouter);

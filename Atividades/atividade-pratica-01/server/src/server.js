@@ -6,11 +6,13 @@ import { locaisColetaRouter } from './routes/locaisColeta.js';
 import { tipoSanguineoRouter } from './routes/tipoSanguineo.js';
 import { pessoasRouter } from './routes/pessoas.js';
 import { doacoesRouter } from './routes/doacoes.js';
+import cors from "cors";
 
 const PORT = 3333;
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 // Routes:
 app.use(mainRouter);
