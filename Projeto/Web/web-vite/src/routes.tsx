@@ -4,6 +4,7 @@ import App from './App';
 import ListAlunos from './components/alunos/ListAlunos';
 import CreateAlunos from './components/alunos/CreateAlunos';
 import UpdateAlunos from './components/alunos/UpdateAlunos';
+import DeleteAlunos from './components/alunos/DeleteAlunos';
 
 import CreateProfessores from './components/professores/CreateProfessores';
 import ListProfessores from './components/professores/ListProfessores';
@@ -16,13 +17,16 @@ const AppRoutes = () => {
             <Routes>
                 <Route path="/" element={ <App /> } />
 
-                <Route path="/alunos" element={ <ListAlunos /> } />
-                <Route path="/professores" element={ <ListProfessores /> } />
-                
+                <Route path="/alunos" element={ <ListAlunos /> } />     
                 <Route path="/alunos/create" element={ <CreateAlunos /> } />
+                <Route path="/alunos/update/:id" element={<UpdateAlunos />} />
+                <Route path="/alunos/delete/:id" element={<DeleteAlunos />} />
+              
+
+                <Route path="/professores" element={ <ListProfessores /> } />
                 <Route path="/professores/create" element={ <CreateProfessores /> } />
 
-                <Route path="/estados/update" element={<UpdateAlunos />} />
+               
                 
 
 

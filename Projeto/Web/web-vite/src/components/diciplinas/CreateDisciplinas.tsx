@@ -8,23 +8,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const CreateDisciplina = () => {
 
     const [nome, setNome] = useState('');
-    const [matricula, setMatricula] = useState('');
-    const [dataNascimento, setDataNascimento] = useState('');
-    const [email, setEmail] = useState('');
-    const [endereco, setEndereco] = useState('');
-    const [turma_id, setTurmaId] = useState('');
-
+    const [cargaHoraria, setCargaHoraria] = useState('');
+    const [Universidade, setUniversidade] = useState('');
+    const [professor_id, setProfessorId] = useState('');
+    const [tarefa_id, setTarefaId] = useState('');
     
     const navigate = useNavigate();
 
-    const handleNewAluno = async (event : React.FormEvent<HTMLFormElement>) => {
+    const handleNewDici = async (event : React.FormEvent<HTMLFormElement>) => {
 
         event.preventDefault();
 
         const data = {
             nome, 
-            matricula, 
-            dataNascimento, 
+            cargaHoraria, 
+            Universidade, 
             email, 
             endereco, 
             turma_id
@@ -71,13 +69,13 @@ const CreateDisciplina = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="matricula">Sigla</label>
+                        <label htmlFor="cargaHoraria">Sigla</label>
                         <input className="form-control"type="text"
-                            name="matricula"
-                            id="matricula"
-                            value={matricula}
+                            name="cargaHoraria"
+                            id="cargaHoraria"
+                            value={cargaHoraria}
                             placeholder="Digite sua matrícula"
-                            onChange={e => setMatricula(e.target.value)}
+                            onChange={e => setCargaHoraria] = useState('');(e.target.value)}
                         />
                     </div>
 
