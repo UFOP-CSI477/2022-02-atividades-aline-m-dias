@@ -4,7 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const DeleteAlunos = () => {
+const DeleteAluno = () => {
 
     const [nome, setNome] = useState('');
     const [matricula, setMatricula] = useState('');
@@ -15,6 +15,7 @@ const DeleteAlunos = () => {
 
     const { id } = useParams();
 
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -30,44 +31,50 @@ const DeleteAlunos = () => {
 
     }, [id]);
 
+    async function handleDeleteAluno(event: React.FormEvent<HTMLFormElement>) {
 
+        event.preventDefault();
 
-    const navigate = useNavigate();
-
-    const handleDeleteAlunos = async() => {
-
-        if (!window.confirm("Confirma exclusão do Aluno?")) {
-            return;
-        }
-
-        // const data = {
-        //     id: parseInt(String(id))
-        // }
+        const data = {
+            id: parseInt(String(id)),
+            nome,
+            matricula,
+            dataNascimento,
+            email,
+            endereco,
+            turma_id
+        };
 
         try {
-            
-            await api.delete(`/alunos/${id}`); 
-            alert('Aluno Excluído com sucesso!')
+
+            await api.delete('/alunos/', {
+                data: {
+                    data
+                }
+            });
+            alert('Aluno excluido com sucesso!');
             navigate('/alunos');
 
-        } catch(error) {
-            alert('Erro ao excluir o Aluno!');
+        } catch (error) {
+            alert('Erro ao atualizar o Aluno!');
             console.error(error);
         }
+
     }
 
-    return(
+    return (
+
         <div className="container">
             <div className="row">
-                <h3>Exclusão Aluno</h3>
+                <h3>Excluir Aluno</h3>
 
 
-                <form onSubmit={handleDeleteAlunos}>
+                <form onSubmit={handleDeleteAluno}>
 
                     <div className="form-group">
                         <label htmlFor="nome">Nome</label>
 
-                        <label>Endereço de email</label>
+                        <label>Digite seu nome</label>
                         <input className="form-control" type="text"
                             name="nome"
                             id="nome"
@@ -87,6 +94,17 @@ const DeleteAlunos = () => {
                             onChange={e => setMatricula(e.target.value)}
                         />
                     </div>
+
+                    <div className="form-group">
+                    <label htmlFor="dataNascimento">Data nascimento</label>
+                    <input className="form-control"type="text"
+                        name="dataNascimento"
+                        id="dataNascimento"
+                        value={dataNascimento}
+                        placeholder="Digite sua Data de Nascimento"
+                        onChange={e => setDataNascimento(e.target.value)}
+                    />
+                </div>
 
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
@@ -122,15 +140,17 @@ const DeleteAlunos = () => {
                     </div>
 
                     
-                    {/* <button className="btn btn-outline-primary px-10 mt-10" type="submit">Cadastrar</button>
-                    <button className="btn btn-outline-primary px-10 mt-10" type="reset">Limpar</button> */}
+                    {/* <button onClick={handleDeleteAluno}>Excluir</button> */}
+                  
                     <Link  className ="btn btn-outline-primary px-10 mt-10"to="/alunos">Voltar</Link>
                 </form>
 
             </div>
         </div>
-    )
+    );
+
+
 
 }
 
-export default DeleteAlunos;
+export default DeleteAluno ;

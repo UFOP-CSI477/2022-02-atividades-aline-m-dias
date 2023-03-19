@@ -81,6 +81,17 @@ const CreateAluno = () => {
                 </div>
 
                 <div className="form-group">
+                    <label htmlFor="dataNascimento">Data nascimento</label>
+                    <input className="form-control"type="text"
+                        name="dataNascimento"
+                        id="dataNascimento"
+                        value={dataNascimento}
+                        placeholder="Digite sua Data de Nascimento"
+                        onChange={e => setDataNascimento(e.target.value)}
+                    />
+                </div>
+
+                <div className="form-group">
                     <label htmlFor="email">Email</label>
                     <input className="form-control" type="text"
                         name="email"
@@ -115,7 +126,6 @@ const CreateAluno = () => {
 
                 
                 <button className="btn btn-outline-primary px-10 mt-10" type="submit">Cadastrar</button>
-                <button className="btn btn-outline-primary px-10 mt-10" type="reset">Limpar</button>
                 <Link  className ="btn btn-outline-primary px-10 mt-10"to="/alunos">Voltar</Link>
             </form>
 

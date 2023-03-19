@@ -8,6 +8,7 @@ import DeleteAlunos from './components/alunos/DeleteAlunos';
 
 import CreateProfessores from './components/professores/CreateProfessores';
 import ListProfessores from './components/professores/ListProfessores';
+import UpdateProfessor from './components/professores/UpdateProfessores';
 
 const AppRoutes = () => {
 
@@ -25,6 +26,7 @@ const AppRoutes = () => {
 
                 <Route path="/professores" element={ <ListProfessores /> } />
                 <Route path="/professores/create" element={ <CreateProfessores /> } />
+                <Route path="/professores/update/:id" element={<UpdateProfessor />} />
 
                
                 

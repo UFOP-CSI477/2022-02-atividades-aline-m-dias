@@ -25,32 +25,32 @@ const ListProfessores = () => {
 
     }, [])
 
-    // const handleDeletealuno = async (id: number) => {
+    const handleDeleteProfessor = async (id: number) => {
 
-    //     // Validações
-    //     if ( !window.confirm( "Confirma exclusão do professor?" ) ) {
-    //         return
-    //     }
+        // Validações
+        if ( !window.confirm( "Confirma exclusão do professor?" ) ) {
+            return
+        }
 
-    //     try {
-    //         await api.delete('/alunos', 
-    //         {
-    //             data: {
-    //                 id
-    //             }
-    //         });
+        try {
+            await api.delete('/professores', 
+            {
+                data: {
+                    id
+                }
+            });
 
-    //         alert("professor excluído com sucesso!");
+            alert("professor excluído com sucesso!");
 
-    //         // Atualizar?
-    //         setalunos( alunos.filter(professor => professor.id != id) );
+            // // Atualizar?
+            // setalunos( alunos.filter(professor => professor.id != id) );
 
-    //     } catch(error) {
-    //         alert("Erro na exclusão do professor!");
-    //         console.error(error);
-    //     }
+        } catch(error) {
+            alert("Erro na exclusão do professor!");
+            console.error(error);
+        }
 
-    // }
+    }
 
 
     return(
@@ -91,7 +91,7 @@ const ListProfessores = () => {
                             <td className= "btn btn-primary"><Link 
                                 to={`/professores/update/${professor.id}`}>Atualizar</Link></td>
                             <td ><button  className= "btn btn-danger "  onClick={()=>{ 
-                                // handleDeletealuno(professor.id)
+                                handleDeleteProfessor(professor.id)
                              }}>Excluir</button> </td>
                         </tr>
                     ))

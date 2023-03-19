@@ -62,15 +62,15 @@ const UpdateAluno = () => {
 
         <div className="container">
             <div className="row">
-                <h3>Cadastrar Aluno</h3>
+                <h3>Atualizar Dados</h3>
 
 
                 <form onSubmit={handleUpdateAluno}>
 
                     <div className="form-group">
-                        <label htmlFor="nome">Nome</label>
 
-                        <label>Endereço de email</label>
+
+                        <label>Digite seu nome</label>
                         <input className="form-control" type="text"
                             name="nome"
                             id="nome"
@@ -81,7 +81,7 @@ const UpdateAluno = () => {
                     </div>
 
                     <div className="form-group">
-                        <label htmlFor="matricula">Sigla</label>
+                        <label htmlFor="matricula">Matricula</label>
                         <input className="form-control" type="text"
                             name="matricula"
                             id="matricula"
@@ -90,6 +90,17 @@ const UpdateAluno = () => {
                             onChange={e => setMatricula(e.target.value)}
                         />
                     </div>
+
+                    <div className="form-group">
+                    <label htmlFor="dataNascimento">Data nascimento</label>
+                    <input className="form-control"type="text"
+                        name="dataNascimento"
+                        id="dataNascimento"
+                        value={dataNascimento}
+                        placeholder="Digite sua Data de Nascimento"
+                        onChange={e => setDataNascimento(e.target.value)}
+                    />
+                </div>
 
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
@@ -125,8 +136,7 @@ const UpdateAluno = () => {
                     </div>
 
                     
-                    <button className="btn btn-outline-primary px-10 mt-10" type="submit">Cadastrar</button>
-                    <button className="btn btn-outline-primary px-10 mt-10" type="reset">Limpar</button>
+                    <button className="btn btn-outline-primary px-10 mt-10" type="submit">Atualizar</button>
                     <Link  className ="btn btn-outline-primary px-10 mt-10"to="/alunos">Voltar</Link>
                 </form>
 
