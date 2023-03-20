@@ -10,6 +10,14 @@ import CreateProfessores from './components/professores/CreateProfessores';
 import ListProfessores from './components/professores/ListProfessores';
 import UpdateProfessor from './components/professores/UpdateProfessores';
 
+import ListDisciplinas from './components/diciplinas/ListDisciplinas';
+import CreateDisciplinas from './components/diciplinas/CreateDisciplinas';
+
+
+import ListTarefas from './components/tarefas/ListTarefas';
+import CreateTarefas from './components/tarefas/CreateTarefas';
+
+
 const AppRoutes = () => {
 
     return (
@@ -28,8 +36,12 @@ const AppRoutes = () => {
                 <Route path="/professores/create" element={ <CreateProfessores /> } />
                 <Route path="/professores/update/:id" element={<UpdateProfessor />} />
 
-               
+
+                <Route path="/disciplinas" element={ <ListDisciplinas /> } />
+                <Route path="/disciplinas/create" element={ <CreateDisciplinas /> } />
                 
+                <Route path="/tarefas" element={ <ListTarefas /> } />
+                <Route path="/tarefas/create" element={ <CreateTarefas/> } />
 
 
                 {/* <Route path="/estados/create" element={ <CreateEstado /> } />

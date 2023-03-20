@@ -40,10 +40,9 @@ const CreateAluno = () => {
 
         } catch (error) {
 
-            <div className="alert alert-danger" role="alert">
-                Erro ao cadastrar o Aluno!
-            </div>
+            alert('Erro ao cadastrar o aluno!');
             console.error(error);
+           
         }
 
     }
@@ -126,6 +125,7 @@ const CreateAluno = () => {
 
                 
                 <button className="btn btn-outline-primary px-10 mt-10" type="submit">Cadastrar</button>
+
                 <Link  className ="btn btn-outline-primary px-10 mt-10"to="/alunos">Voltar</Link>
             </form>
 
