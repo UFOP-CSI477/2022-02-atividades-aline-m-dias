@@ -38,4 +38,4 @@ controle de suas tarefas e organização do seu tempo de estudo de forma eficien
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-Foi realizado o desenvolvimento de um protótipo de baixa fidelidade, o mesmo pode ser visualizado aqui.
+Foi realizado o desenvolvimento de um protótipo de baixa fidelidade, o mesmo pode ser visualizado no link: https://github.com/UFOP-CSI477/2022-02-atividades-aline-m-dias/tree/master/Prototipo

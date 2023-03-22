@@ -55,7 +55,7 @@ Tenha instalado na sua máquina:
 Para acessá-lo, basta digitar http://localhost:3333 em seu navegador."
 
 - Já para visualizar o frontend do projeto, navegue até a pasta web do projeto e instale as dependências do projeto utilizando o comando   ```npm i```
-- Para rodar o projeto do servidor digite  ```yarn start```.
+- Para rodar o projeto do frontend digite  ```yarn start```.
 - O servidor frontend do projeto está configurado para rodar na porta 3000. 
 Para acessá-lo, basta digitar http://localhost:3000 em seu navegador."
 ### 6. Referências
