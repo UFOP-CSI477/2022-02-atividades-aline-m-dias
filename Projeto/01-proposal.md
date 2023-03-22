@@ -8,8 +8,8 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
-
+Este projeto consiste no desenvolvimento de controle de tarefas escolares para auxiliar os usuários com 
+controle de suas tarefas e organização do seu tempo de estudo de forma eficiente.
 <!-- Apresentar o tema. -->
 ### 1. Tema
 
@@ -38,8 +38,4 @@
 <!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
 ### 4. Protótipo
 
-  Protótipos será apresentado em breve.
-
-### 5. Referências
-
-  Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT.
+Foi realizado o desenvolvimento de um protótipo de baixa fidelidade, o mesmo pode ser visualizado aqui.

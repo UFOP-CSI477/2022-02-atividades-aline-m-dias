@@ -1,0 +1,56 @@
+.Create {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .Create h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .Create form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .Create label {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .Create input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .Create button[type="submit"], .Create button[type="reset"], .Create a {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .Create button[type="reset"], .Create a {
+    background-color:  #333;
+  
+  }
+  
+  
+  button {
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+
+  

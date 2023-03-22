@@ -1,0 +1,92 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Aluno
+model Student {
+  id           Int      @id @default(autoincrement())
+  name         String
+  registration String
+  birthDate    DateTime
+  email        String   @unique
+  address      String
+
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+
+  Task       Task[]
+  Deliveries Deliveries[]
+}
+
+// Professor
+model Teacher {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+
+  Class      Class[]
+  Discipline Discipline[]
+}
+
+// Turma
+model Class {
+  id        Int    @id @default(autoincrement())
+  name      String
+  year      String
+  teacherId Int
+
+  teacher Teacher @relation(fields: [teacherId], references: [id])
+  Task    Task[]
+}
+
+// Tarefa
+model Task {
+  id           Int      @id @default(autoincrement())
+  description  String
+  deliveryDate DateTime
+  studentId    Int
+  classId      Int
+
+  student    Student      @relation(fields: [studentId], references: [id])
+  class      Class        @relation(fields: [classId], references: [id])
+  Discipline Discipline[]
+}
+
+// Disciplina
+model Discipline {
+  id         Int    @id @default(autoincrement())
+  name       String
+  workload   String
+  university String
+  teacherId  Int
+  taskId     Int
+
+  teacher Teacher @relation(fields: [teacherId], references: [id])
+  task    Task    @relation(fields: [taskId], references: [id])
+}
+
+// Entrega
+model Deliveries {
+  id           Int      @id @default(autoincrement())
+  deliveryDate DateTime
+  grades       Int
+  studentId    Int
+
+  student Student @relation(fields: [studentId], references: [id])
+}
+
+model Administrator {
+  id Int @id @default(autoincrement())
+
+  name     String
+  email    String @unique
+  password String
+
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+}

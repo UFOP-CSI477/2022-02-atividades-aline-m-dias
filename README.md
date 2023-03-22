@@ -9,5 +9,5 @@
 - Link para o seu GitHub: https://github.com/aline-m-dias
 
 ## [Projeto final:](./Projeto/README.md)
-
-
+Meu sistema consiste no desenvolvimento de controle de tarefas escolares para auxiliar os usuários com 
+controle de suas tarefas e organização do seu tempo de estudo de forma eficiente.
